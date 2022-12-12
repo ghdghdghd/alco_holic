@@ -93,36 +93,146 @@ class _customPageState extends State<customPage> {
                   SizedBox(height: 30.0,),
 
 
-
-
-
-
                 ] ////////////////////////////////////////////////
 
                 ),
               ),
+              Positioned(
+                top: 70,
+                child: Container(
+                     height: 520,
+                  // width: 700,
+                  // alignment: Alignment.bottomCenter,
+
+                  child: Positioned(
+                    child: SvgPicture.asset('assets/icons/last_background.svg', fit: BoxFit.fill,),
+                    //top: 20,
+                  ),
+
+
+                ),
+              ),
               Container(
-
-                //alignment: Alignment.center,
-
                 child: Positioned(
-                  child: SvgPicture.asset('assets/icons/last_background.svg'),
-
+                  child: Image.asset('assets/images/drink_image_2.png'),
+                  top: 158,
+                  left: 50,
+                ),
+              ),
+              Container(
+                child: Positioned(
+                  child: Column(children: [
+                    Text('잭다니엘', style: TextStyle(fontWeight: FontWeight.w800, fontSize: 18)),
+                    SizedBox(height: 5.0,),
+                    Container(
+                        width: 63,
+                        child: Text('300ml',textAlign: TextAlign.start,)
+                    ),
+                    SizedBox(height: 5.0,),
+                    Container(
+                        width: 63,
+                        child: Text('2022.10.10', style: TextStyle(fontSize: 10) ,textAlign: TextAlign.start,)
+                    ),
+                  ]),
+                  top: 190,
+                  left: 130,
+                ),
+              ),
+              Container(
+                child: Positioned(
+                  child: SvgPicture.asset('assets/icons/plus_box.svg'),
+                  top: 400,
+                  left: 70,
+                ),
+              ),
+              Container(
+                child: Positioned(
+                  child: SvgPicture.asset('assets/icons/plus_box.svg'),
+                  top: 300,
+                  left: 70,
                 ),
 
 
-              ),
+              ),////////////////////////////////////////////////////////////
+
+
+
               Container(
-
                 //alignment: Alignment.center,
-
                 child: Positioned(
                   child: SvgPicture.asset('assets/icons/nav_bg.svg'),
-                  top: 570,
+                  top: 508,
                 ),
-
-
               ),
+              Container(
+                child: Stack(
+                    children: [
+                      Container(
+                        child: Positioned(
+                          child: IconButton(
+                            icon: SvgPicture.asset('assets/icons/nav_icon_1.svg'),
+                            onPressed: () {
+
+                            },
+                          ),
+                          top: 555,
+                          left: 15,
+                        ),
+                      ),
+                      Container(
+                        child: Positioned(
+                          child: IconButton(
+                            icon: SvgPicture.asset('assets/icons/nav_icon_2.svg'),
+                            onPressed: () {
+
+                            },
+                          ),
+                          top: 555,
+                          left: 90,
+                        ),
+                      ),
+                      Container(
+                        child: Positioned(
+                          child: IconButton(
+                            icon: SvgPicture.asset('assets/icons/nav_icon_3.svg'),
+                            onPressed: () {
+
+                            },
+                          ),
+                          top: 520,
+                          left: 155,
+                        ),
+                      ),
+                      Container(
+                        child: Positioned(
+                          child: IconButton(
+                            icon: SvgPicture.asset('assets/icons/nav_icon_4.svg'),
+                            onPressed: () {
+
+                            },
+                          ),
+                          top: 555,
+                          left: 220,
+                        ),
+                      ),
+                      Container(
+                        child: Positioned(
+                          child: IconButton(
+                            icon: SvgPicture.asset('assets/icons/nav_icon_5.svg'),
+                            onPressed: () {
+
+                            },
+                          ),
+                          top: 555,
+                          left: 300,
+                        ),
+                      ),
+
+
+                      
+                    ]
+                ),
+              )
 
 
 
