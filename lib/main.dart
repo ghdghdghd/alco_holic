@@ -3,9 +3,18 @@ import 'package:flutter_svg/flutter_svg.dart';
 
 import 'customPage.dart';
 
-void main() {
-  runApp(const alco());
-}
+void main() => runApp(MaterialApp(
+  debugShowCheckedModeBanner: false,
+  //title: 'Flutter Demo',
+  // theme: ThemeData(
+  //   primarySwatch: Colors.blue,
+  // ),
+  home: alco(),
+));
+
+// void main() {
+//   runApp(const alco());
+// }
 
 // class MyApp extends StatelessWidget {
 //   const MyApp({super.key});
@@ -538,7 +547,9 @@ class _alcoState extends State<alco> {
 
 
         ),/////////////////////////////////////////////////////////
-        bottomNavigationBar: Container(
+        bottomNavigationBar:
+
+        Container(
           margin: EdgeInsets.fromLTRB(0, 20, 0, 0),
           child: Stack(
               children: [
@@ -578,9 +589,31 @@ class _alcoState extends State<alco> {
                           onPressed: () {
                             Navigator.push(
                                 context,
-                                MaterialPageRoute(builder: (context) => customMenu(),
+                                MaterialPageRoute(builder: (context) => customPage(),
                                 )
                             );
+                            // showDialog(
+                            //     context: context,
+                            //     barrierDismissible: true, // 바깥 영역 터치시 닫을지 여부
+                            //     builder: (BuildContext context) {
+                            //       return AlertDialog(
+                            //         content: customMenu(),
+                            //         backgroundColor: Colors.transparent,
+                            //         //insetPadding: const  EdgeInsets.fromLTRB(0,80,0, 80),
+                            //         actions: [
+                            //           // TextButton(
+                            //           //   child: const Text('확인'),
+                            //           //   onPressed: () {
+                            //           //     Navigator.of(context).pop();
+                            //           //   },
+                            //           // ),
+                            //         ],
+                            //       );
+                            //     }
+                            // );
+
+
+
                           },
                           icon: SvgPicture.asset('assets/icons/nav_icon_3.svg')
                       ),
@@ -643,7 +676,19 @@ class _customMenuState extends State<customMenu> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      child: SvgPicture.asset('assets/icons/background_new.svg'),
+       child: Stack(children: [
+         Container(
+           child: SvgPicture.asset('assets/icons/background_new.svg'),
+         ),
+        // Container(
+        //   child: Positioned(
+        //       child:
+        //   ),
+        // ),
+
+
+       ]),
+
     );
   }
 }
